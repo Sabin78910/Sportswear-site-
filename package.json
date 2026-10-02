@@ -1,0 +1,17 @@
+{
+  "name": "sportswear-storefront",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sportswear FW26 Drift Couture storefront with a scroll-driven background video.",
+  "scripts": {
+    "start": "npx --yes serve . -l 8080",
+    "dev": "npx --yes serve . -l 8080"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "ecommerce",
+    "scroll-video",
+    "fashion",
+    "vanilla-js"
+  ]
+}

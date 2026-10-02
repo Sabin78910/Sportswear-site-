@@ -1,0 +1,340 @@
+/* ==========================================================================
+   Sections: page-level layout, top to bottom.
+   Vertical padding is generous on purpose: it sets how much scroll (and so
+   how much video) each section gets.
+   ========================================================================== */
+
+/* Hero -------------------------------------------------------------------- */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100svh;
+  padding-block: 120px 104px;
+}
+
+.hero__inner {
+  display: grid;
+  gap: 18px;
+  width: 100%;
+}
+
+.hero__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 900;
+  font-stretch: 150%;
+  font-size: clamp(44px, 12.5vw, 210px);
+  line-height: 0.82;
+  letter-spacing: -0.035em;
+}
+
+.hero__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.season {
+  display: inline-flex;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.season span {
+  padding: 8px 12px;
+  background: var(--color-asphalt);
+}
+
+.season span:first-child {
+  background: var(--color-livery);
+}
+
+/* Statement --------------------------------------------------------------- */
+
+.statement {
+  padding-block: 26vh 30vh;
+}
+
+.statement__inner {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.statement__text {
+  max-width: 13ch;
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 112%;
+  font-size: clamp(34px, 6vw, 92px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-align: right;
+  text-wrap: balance;
+}
+
+/* Feature board ----------------------------------------------------------- */
+
+.feature {
+  padding-block: 10vh 32vh;
+}
+
+.board {
+  display: grid;
+  gap: 18px;
+  width: min(460px, 100%);
+  padding: 24px;
+  background: var(--color-ice);
+  color: var(--color-asphalt);
+}
+
+.board__eyebrow {
+  color: var(--color-livery);
+  font-weight: 600;
+}
+
+.board__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-stretch: 130%;
+  font-size: clamp(28px, 3.4vw, 42px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.board__copy {
+  margin: 0;
+  color: var(--color-copy-dark);
+}
+
+.board__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.spec {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 18px;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+}
+
+.spec dt {
+  color: var(--color-muted-dark);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.spec dd {
+  margin: 0;
+}
+
+/* Shop -------------------------------------------------------------------- */
+
+.shop {
+  padding-block: 12vh 18vh;
+  scroll-margin-top: 70px;
+}
+
+.shop__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.shop__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 900;
+  font-stretch: 150%;
+  font-size: clamp(36px, 7vw, 104px);
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+  gap: clamp(12px, 2vw, 28px);
+}
+
+/* Pit lane ---------------------------------------------------------------- */
+
+.pit {
+  padding-block: 30vh 8vh;
+}
+
+.pit__inner {
+  display: grid;
+  justify-items: start;
+  gap: 18px;
+}
+
+.pit__num {
+  display: inline-grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border: 3px solid var(--color-asphalt);
+  background: var(--color-chalk);
+  color: var(--color-asphalt);
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 44px;
+}
+
+.pit__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 900;
+  font-stretch: 150%;
+  font-size: clamp(40px, 9vw, 150px);
+  line-height: 0.82;
+  letter-spacing: -0.035em;
+}
+
+.pit__note {
+  max-width: 46ch;
+  margin: 0;
+  padding: 16px 18px;
+  background: var(--color-asphalt);
+}
+
+/* Footer ------------------------------------------------------------------ */
+
+.footer {
+  margin-top: 30vh;
+}
+
+.footer__body {
+  /* bottom padding keeps the legal row clear of the fixed lap timer */
+  padding-block: 48px calc(96px + env(safe-area-inset-bottom, 0px));
+  background: var(--color-asphalt);
+}
+
+.footer__word {
+  margin: 0 0 28px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 900;
+  font-stretch: 150%;
+  font-size: clamp(28px, 8.2vw, 170px);
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 36px;
+}
+
+.footer__heading {
+  margin: 0 0 12px;
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.footer__list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__list a {
+  color: var(--color-chalk);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer__list a:hover {
+  color: var(--color-livery);
+}
+
+.footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 40px;
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+
+.newsletter p {
+  max-width: 36ch;
+  margin: 0 0 14px;
+  color: var(--color-muted);
+}
+
+.newsletter__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.newsletter__row input {
+  flex: 1 1 200px;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid var(--color-line);
+  border-radius: 0;
+  background: var(--color-asphalt-2);
+  color: var(--color-chalk);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.newsletter .newsletter__msg {
+  min-height: 1em;
+  margin: 10px 0 0;
+  color: var(--color-ice);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+/* Responsive -------------------------------------------------------------- */
+
+@media (max-width: 860px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .newsletter {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .board {
+    padding: 20px;
+  }
+}

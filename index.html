@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sportswear | FW26 Drift Couture</title>
+  <meta name="description" content="Sportswear FW26 Drift Couture: track-cut clothing for people who move fast. Shop the Nimbus Tulle Parka, the Lap Collection and the numbered Pit Lane Capsule.">
+  <meta name="theme-color" content="#0d1316">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sportswear | FW26 Drift Couture">
+  <meta property="og:description" content="Built for the grid. Cut for the cloud.">
+  <meta property="og:image" content="assets/images/poster.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:ital,wdth,wght@0,50..150,400..900;1,50..150,400..900&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+
+  <!-- Styles (order matters: tokens → base → components → sections) -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+
+  <link rel="preload" href="assets/images/poster.jpg" as="image">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Scroll-driven background video: full opacity, no overlay -->
+  <div class="stage" aria-hidden="true">
+    <video id="bg-video" muted playsinline preload="auto" poster="assets/images/poster.jpg"
+           data-src-mp4="assets/video/sportswear.mp4"
+           data-src-webm="assets/video/sportswear.webm"></video>
+  </div>
+
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="logo" href="#top" aria-label="Sportswear home">SPORTSWEAR</a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="#nimbus">Nimbus</a>
+        <a href="#shop">Shop</a>
+        <a href="#pit">Pit Lane</a>
+        <a href="#info">Info</a>
+      </nav>
+      <button class="bag-btn" id="bag-open" type="button" aria-haspopup="dialog" aria-controls="bag-drawer">
+        Bag <span class="bag-btn__count" id="bag-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="wrap hero__inner">
+        <div class="season"><span>FW26</span><span>Drift Couture</span></div>
+        <h1 class="hero__title text-shadow">Sports&shy;wear</h1>
+        <div class="hero__row">
+          <p class="eyebrow text-shadow">Track-cut clothing for people who move fast · Scroll to run the lap</p>
+          <a class="btn" href="#shop">Shop the collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statement -->
+    <section class="statement" aria-label="Brand statement">
+      <div class="wrap statement__inner">
+        <p class="statement__text text-shadow">Built for the grid. Cut for the cloud.</p>
+      </div>
+    </section>
+
+    <!-- Featured product -->
+    <section class="feature" id="nimbus">
+      <div class="wrap">
+        <article class="board" aria-labelledby="nimbus-title">
+          <span class="eyebrow board__eyebrow">Hero piece · SW-OW-0126</span>
+          <h2 class="board__title" id="nimbus-title">Nimbus Tulle Parka</h2>
+          <p class="board__copy">Thirty-eight layers of recycled nylon tulle, hand-gathered over a waterproof ripstop shell. It moves like tyre smoke and packs into its own hood.</p>
+          <dl class="spec">
+            <dt>Shell</dt><dd>Ripstop nylon, 20k/20k</dd>
+            <dt>Volume</dt><dd>38 tulle layers, 2.1 kg</dd>
+            <dt>Fit</dt><dd>Oversized, cropped at hip</dd>
+            <dt>Colour</dt><dd>Glacier Teal</dd>
+          </dl>
+          <fieldset class="sizes">
+            <legend>Size</legend>
+            <label><input type="radio" name="nimbus-size" id="ns-xs" value="XS"><span>XS</span></label>
+            <label><input type="radio" name="nimbus-size" id="ns-s" value="S"><span>S</span></label>
+            <label><input type="radio" name="nimbus-size" id="ns-m" value="M" checked><span>M</span></label>
+            <label><input type="radio" name="nimbus-size" id="ns-l" value="L"><span>L</span></label>
+            <label><input type="radio" name="nimbus-size" id="ns-xl" value="XL"><span>XL</span></label>
+          </fieldset>
+          <div class="board__actions">
+            <span class="price price--lg">$1,240</span>
+            <button class="btn" type="button" data-add-featured="nimbus">Add to bag</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Catalogue -->
+    <section class="shop" id="shop" aria-labelledby="shop-title">
+      <div class="wrap">
+        <div class="shop__head">
+          <h2 class="shop__title text-shadow" id="shop-title">The Lap<br>Collection</h2>
+          <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Capsule -->
+    <section class="pit" id="pit" aria-labelledby="pit-title">
+      <div class="wrap pit__inner">
+        <span class="pit__num" aria-hidden="true">1</span>
+        <h2 class="pit__title text-shadow" id="pit-title">Pit Lane<br>Capsule</h2>
+        <p class="pit__note">Six pieces cut from the No.1 drift livery: racing red, carbon black and sponsor-strip panels. Limited to 400 numbered units per style.</p>
+        <a class="btn btn--light" href="#shop" data-filter-link="Pit Lane">Shop Pit Lane</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="info">
+    <div class="kerb" aria-hidden="true"></div>
+    <div class="footer__body">
+      <div class="wrap">
+        <p class="footer__word" aria-hidden="true">Sportswear</p>
+        <div class="footer__grid">
+          <div class="newsletter">
+            <h3 class="footer__heading">Grid list</h3>
+            <p>Drop dates for numbered capsules, 48 hours before anyone else.</p>
+            <form id="newsletter-form" novalidate>
+              <div class="newsletter__row">
+                <label class="visually-hidden" for="newsletter-email">Email address</label>
+                <input type="email" id="newsletter-email" name="email" placeholder="you@email.com" autocomplete="email" required>
+                <button class="btn" type="submit">Join</button>
+              </div>
+              <p class="newsletter__msg" id="newsletter-msg" role="status"></p>
+            </form>
+          </div>
+          <div>
+            <h3 class="footer__heading">Shop</h3>
+            <ul class="footer__list">
+              <li><a href="#shop">All pieces</a></li>
+              <li><a href="#nimbus">Nimbus Parka</a></li>
+              <li><a href="#pit">Pit Lane Capsule</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer__heading">Help</h3>
+            <ul class="footer__list">
+              <li><a href="#info">Shipping: 2–4 days</a></li>
+              <li><a href="#info">Returns: 30 days</a></li>
+              <li><a href="#info">Size guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer__heading">Studio</h3>
+            <ul class="footer__list">
+              <li><a href="#info">About</a></li>
+              <li><a href="#info">Stockists</a></li>
+              <li><a href="#info">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__legal">
+          <span>© <span id="year">2026</span> Sportswear</span>
+          <span>Free shipping over $500</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lap timer: shows the video time the scroll position maps to -->
+  <div class="lap" aria-hidden="true">
+    <span class="lap__label">Lap 01</span><span class="lap__time" id="lap-time">00:00.00</span>
+    <span class="lap__label" id="lap-state">Loading</span><span class="lap__time" id="lap-total">/ 00:09.04</span>
+    <div class="lap__bar"><i id="lap-bar"></i></div>
+  </div>
+
+  <!-- Bag drawer -->
+  <div class="drawer-backdrop" id="bag-backdrop" hidden></div>
+  <aside class="drawer" id="bag-drawer" role="dialog" aria-modal="true" aria-labelledby="bag-title" aria-hidden="true">
+    <div class="drawer__head">
+      <h2 class="drawer__title" id="bag-title">Your bag</h2>
+      <button class="icon-btn" id="bag-close" type="button" aria-label="Close bag">✕</button>
+    </div>
+    <div class="drawer__lines" id="bag-lines"></div>
+    <div class="drawer__foot" id="bag-foot"></div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <p class="noscript">This store needs JavaScript for the bag and the scroll-driven video.</p>
+  </noscript>
+</body>
+</html>

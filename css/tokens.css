@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Design tokens
+   Single source of truth for colour, type and spacing.
+   ========================================================================== */
+
+:root {
+  /* Colour */
+  --color-ice: #ecf7f9;
+  --color-asphalt: #0d1316;
+  --color-asphalt-2: #182126;
+  --color-livery: #e1232f;
+  --color-livery-hover: #f2333f;
+  --color-teal-ink: #0a3a46;
+  --color-chalk: #ffffff;
+  --color-muted: #8fa6ad;
+  --color-muted-dark: #64797f;
+  --color-copy-dark: #3a4c52;
+  --color-line: rgba(255, 255, 255, 0.14);
+
+  /* Typography */
+  --font-display: "Anybody", "Arial Black", "Helvetica Neue", sans-serif;
+  --font-body: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* Layout */
+  --gutter: clamp(16px, 4vw, 48px);
+  --max-width: 1440px;
+  --nav-offset: calc(env(safe-area-inset-top, 0px) + 14px);
+
+  /* Shape */
+  --slant: 10px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* Layers */
+  --z-content: 1;
+  --z-lap: 15;
+  --z-nav: 20;
+  --z-drawer: 40;
+  --z-toast: 50;
+
+  color-scheme: dark;
+}
